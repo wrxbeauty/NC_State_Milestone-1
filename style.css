@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: #ff6f91;
+}
+
+.pegs > button {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+    #peg-btn1 {
+        background-color: #845ec2;
+    }
+    #peg-btn2 {
+        background-color: #d65db1
+    }
+    #peg-btn3 {
+        background-color: #ff6f91;
+    }
+    #peg-btn4 {
+        background-color: #ff9671;
+    }
+    #peg-btn5 {
+        background-color: #ffc75f;
+    }
+    #peg-btn6 {
+        background-color: #f9f871;
+    }
