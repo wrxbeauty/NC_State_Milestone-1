@@ -11,28 +11,40 @@ h1 {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    margin: 2px;
   }
   
+
 .pegs > button {
     width: 30px;
     height: 30px;
     border-radius: 10px;
+    border: solid 2px white;
 }
-    #peg-btn1 {
+    /* #peg-btn1 {
         background-color: #845ec2;
-    }
+    } */
     #peg-btn2 {
-        background-color: #d65db1
+        color: #d65db1;
+        background-color: #d65db1;
+        margin: 5px;
     }
     #peg-btn3 {
+        color: #ff6f91;
         background-color: #ff6f91;
+        margin: 5px;
     }
     #peg-btn4 {
+        color: #ff9671;
         background-color: #ff9671;
+        margin: 5px;
+
     }
-    #peg-btn5 {
+    /* #peg-btn5 {
         background-color: #ffc75f;
-    }
+    } */
     #peg-btn6 {
+        color: #f9f871;
         background-color: #f9f871;
+        margin: 5px;
     }
