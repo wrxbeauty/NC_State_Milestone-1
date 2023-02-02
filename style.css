@@ -1,10 +1,16 @@
 * { 
-    border: dashed 1px white;
+   border: solid 1px white;
 }
 
 body {
     background-color: black;
-    width: 85%;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -12,9 +18,33 @@ h1 {
     font-size: 50px;
 }
 
+#start {
+    text-align: center;
+    width: 75px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    margin-left: 95px;
+    color: white;
+    background-color: #ff6f91;
+    border-radius: 5px;
+}
+
+.container  div {
+    align-content: center;
+}
+
+.master-dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+}
+
 .dot {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -23,6 +53,9 @@ h1 {
 
   #hint-row {
     display: inline;
+    margin-left: 50px;
+    padding: 2px;
+    /* border: solid 1px #ff6f91; */
   }
 
   #hint-row > .dot {
