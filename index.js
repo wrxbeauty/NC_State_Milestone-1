@@ -4,18 +4,18 @@ start.addEventListener('click', randomMaster)
 const pegs = document.getElementById('pegs')
 let rowNumber = 1
 let selectedColor
-console.log(pegs)
+// console.log(pegs)
 let choices = []
+let currentRow = []
 
 for (const child of Array.from(pegs.children)) {
-    console.log(child)
+    // console.log(child)
     child.addEventListener('click', (e) => {
         selectedColor = e.target.classList[0]
         choices.push(selectedColor)
         if (choices.length === 3) {
             guessRow()
         }
-        
     })
 }
 
@@ -35,27 +35,34 @@ function guessRow() {
     console.log(choices)
     const row1 = document.getElementById(`row-${rowNumber}`)
     Array.from(row1.children).forEach((child, i) => {
-        console.log(child)
-
-        child.getElementsByClassName.backgroundColor = choices[i]
+        // console.log(child)
+        child.style.backgroundColor = choices[i]
+        // console.log(i)
+        // currentRow.push(i)
+        
     })
     choices = []
     rowNumber++
-}
-
- function changeCurrentRow(pegs) {
-    let fill = document.querySelector('colors')
-    
-    fill.addEventListener('click', (e) => {
-        
-    })
-    
-}
-
-function compare(dot, final) {
-    if(dot.colors === final){
-        return true = ('You Win');
+    if (choices === final) {
+        console.log('You Win')
     }
-    return false;
 }
 
+ function changeCurrentColor() {
+    let fill = document.querySelector('#pegs buttons')
+    
+    fill.addEventListener('click', () => {
+        guessRow()
+    })
+    // console.log(fill)
+}
+
+function compare() {
+    // console.log(choices)
+    //let isValid = document.querySelector('#game-rows .row')
+    
+    //else (isValid != final) 
+        //console.log('You Lost')
+    
+}
+compare()
