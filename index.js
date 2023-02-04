@@ -1,3 +1,6 @@
+const start = document.getElementById('start')
+start.addEventListener('click', randomMaster)
+
 const pegs = document.getElementById('pegs')
 let rowNumber = 1
 let selectedColor
@@ -12,6 +15,7 @@ for (const child of Array.from(pegs.children)) {
         if (choices.length === 3) {
             guessRow()
         }
+        
     })
 }
 
@@ -38,3 +42,20 @@ function guessRow() {
     choices = []
     rowNumber++
 }
+
+ function changeCurrentRow(pegs) {
+    let fill = document.querySelector('colors')
+    
+    fill.addEventListener('click', (e) => {
+        
+    })
+    
+}
+
+function compare(dot, final) {
+    if(dot.colors === final){
+        return true = ('You Win');
+    }
+    return false;
+}
+
