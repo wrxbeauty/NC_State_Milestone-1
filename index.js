@@ -32,20 +32,18 @@ function randomMaster() {
 }
 
 function guessRow() {
-    console.log(choices)
+    console.log('choices', choices)
     const row1 = document.getElementById(`row-${rowNumber}`)
     Array.from(row1.children).forEach((child, i) => {
         // console.log(child)
         child.style.backgroundColor = choices[i]
-        // console.log(i)
-        // currentRow.push(i)
-        
     })
+    if (compareArray(choices, final)) {
+        console.log('You Win')
+        revealFinal()
+    }
     choices = []
     rowNumber++
-    if (choices === final) {
-        console.log('You Win')
-    }
 }
 
  function changeCurrentColor() {
@@ -54,15 +52,23 @@ function guessRow() {
     fill.addEventListener('click', () => {
         guessRow()
     })
-    // console.log(fill)
 }
 
-function compare() {
-    // console.log(choices)
-    //let isValid = document.querySelector('#game-rows .row')
-    
-    //else (isValid != final) 
-        //console.log('You Lost')
-    
-}
-compare()
+function compareArray(a, b) {
+    if (a.length !== b.length) return false
+  
+    a.sort()
+    b.sort()
+  
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return false
+    }
+    return true
+  }
+
+  function revealFinal() {
+    const masterRow = document.getElementById('master')
+    Array.from(masterRow.children).forEach((child, i) => {
+      child.style.backgroundColor = final[i]
+    })
+  }
