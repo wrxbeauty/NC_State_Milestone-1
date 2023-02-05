@@ -1,21 +1,23 @@
-* { 
+/* * { 
    border: solid 1px white;
-}
+} */
 
 body {
     background-color: black;
     width: 100%;
+    display: inline-flexbox;
 }
 
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 h1 {
     color: #ff6f91;
     font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 
 #start {
@@ -29,18 +31,22 @@ h1 {
     border-radius: 5px;
 }
 
-.container > div {
+.container {
+    display: block;
+    justify-content: center;
     align-content: center;
-
+    margin: 20px 20px;
+    padding: 20px 20px;
+    background-color: ;
 }
 
 .master-dot {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: #bbb;
     border-radius: 50%;
-    
     margin: 2px;
+    display: inline-flex;
 }
 
 .row {
@@ -49,38 +55,38 @@ h1 {
     align-content: center;
 }
 
-#game-rows, #hint-rows {
-    display: inline-block;
-}
-
-#hint-rows {
+/* #hint-rows {
     display: inline-block;
     padding: 2px;
     /* border: solid 1px #ff6f91; */
-  }
+  /* }
 
   #hint-row > .dot {
     height: 10px;
     width: 10px;
-  }
+  } */ 
 
 .dot {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
     margin: 2px;
   }
+
+.peg-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
 
 #pegs > button {
     width: 30px;
     height: 30px;
     border-radius: 10px;
     border: solid 2px white;
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
 }
     /* #peg-btn1 {
         background-color: #845ec2;

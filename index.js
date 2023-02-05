@@ -46,9 +46,9 @@ function guessRow() {
     rowNumber++
 }
 
- function changeCurrentColor() {
+function changeCurrentColor() {
     let fill = document.querySelector('#pegs buttons')
-    
+
     fill.addEventListener('click', () => {
         guessRow()
     })
@@ -56,19 +56,19 @@ function guessRow() {
 
 function compareArray(a, b) {
     if (a.length !== b.length) return false
-  
+
     a.sort()
     b.sort()
-  
+
     for (let i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) return false
+        if (a[i] !== b[i]) return false
     }
     return true
-  }
+}
 
-  function revealFinal() {
+function revealFinal() {
     const masterRow = document.getElementById('master')
     Array.from(masterRow.children).forEach((child, i) => {
-      child.style.backgroundColor = final[i]
+        child.style.backgroundColor = final[i]
     })
-  }
+}
